@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-
+import os
 
 def solve(m1, m2, std1, std2):
     a = 1 / (2 * std1 ** 2) - 1 / (2 * std2 ** 2)
@@ -61,4 +61,14 @@ def main():
 
 
 if __name__ == '__main__':
+    dirName = "results"
+    if not os.path.exists(dirName):
+        try:
+            os.mkdir(dirName)
+        except OSError:
+            print("Creation of the directory %s failed" % dirName)
+        else:
+            print("Successfully created the directory %s " % dirName)
+    else:
+        print("Directory already exists.")
     main()
