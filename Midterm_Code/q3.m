@@ -3,7 +3,7 @@ clear all; close all; clc;
 low = -1;
 high = 1;
 N = 10;
-v_sigma = 3.0;       % choose sigma in a way which will increase noise (standard distribution sigma: 1)
+v_sigma = 0.4;       % choose sigma in a way which will increase noise (standard distribution sigma: 1)
 
 % choose real roots to be -1, 0, 1. i.e. x^3 - x is the expression.
 W_true = [1, 0, -1, 0];
